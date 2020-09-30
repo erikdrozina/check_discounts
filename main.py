@@ -4,10 +4,12 @@ import lidl
 from lidl import check_price_lidl
 from lidl import webD
 
-items = ["birra", "beer", "ceci", "amaro", "vino", "succo", "spumante", "uova"]
+# list of wanted items
+items = ["birra", "ceci", "succo", "uova"]
 
-if __name__ == '__main__':
 
+# check items on lidl site
+def lidl():
     print()
     print("----------LIDL----------\n")
 
@@ -16,3 +18,9 @@ if __name__ == '__main__':
 
     webD.close()
     print()
+
+
+# main
+if __name__ == '__main__':
+
+    lidl()
