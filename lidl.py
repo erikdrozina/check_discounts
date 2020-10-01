@@ -1,5 +1,6 @@
 import selenium
 from selenium import webdriver as wb
+from time import sleep
 
 # initial setup
 page_url = "https://www.lidl.it/it/c/offerte-settimanali/c10/w1"
@@ -9,6 +10,7 @@ webD.get(page_url)
 # click on the "accept cookies" button
 button = webD.find_element_by_xpath("/html/body/dialog/div/div[1]/button")
 button.click()
+sleep(2)
 
 
 def check_price_lidl(strin):
