@@ -1,4 +1,4 @@
-# check_discouts
+# check_discounts
 A little pthon program that check if there are some interesting stuff on some supermarket sites
 
 # Requirements:
