@@ -1,6 +1,3 @@
-# import selenium
-# from selenium import webdriver as wb
-
 import lidl
 from lidl import check_price_lidl
 from lidl import webD as webD_lidl
@@ -10,10 +7,10 @@ from penny import check_price_penny
 from penny import webD as webD_penny
 
 # list of wanted items
-items = ["birra", "ceci", "succo", "uova", "alette", "bieta"]
+items = ["birra", "ceci", "grappa", "limoncello", "vino", "amaro", ""]
 
 
-# check items on lidl site
+# check items on lidl and penny sites
 def lidl():
     print()
     print("----------LIDL----------\n")
@@ -24,13 +21,14 @@ def lidl():
     webD_lidl.close()
     print()
 
+
 def penny():
     print()
     print("----------PENNY----------\n")
 
     for i in items:
         check_price_penny(i)
-    
+
     webD_penny.close()
     print()
 
