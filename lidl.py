@@ -11,9 +11,10 @@ page_url = "https://www.lidl.it/it/offerte-settimanali"
 webD = wb.Firefox(options=options)
 webD.get(page_url)
 print()
-print("Headless Firefox Initialized at Lidl site\n")
+print("Headless Firefox Initialized at Lidl site")
 
 # click on the "accept cookies" button
+sleep(2)
 button = webD.find_element_by_xpath("/html/body/dialog/div/div[1]/button")
 button.click()
 sleep(2)
