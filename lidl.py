@@ -29,6 +29,6 @@ def check_price_lidl(strin):
     # check the wanted products
     for i in range(len(products)):
         if strin in products[i].text.lower():
-            print(products[i].text.lower()+": " + prices[i].text + "€")
+            print(products[i].text.lower()+": " + prices[i].text + " €")
         else:
             pass

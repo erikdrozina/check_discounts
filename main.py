@@ -7,7 +7,7 @@ from penny import check_price_penny
 from penny import webD as webD_penny
 
 # list of wanted items
-items = ["birra", "ceci", "grappa", "vino", "cioccolato", "gocciole"]
+items = ["birra", "ceci", "grappa", "vino", "cioccolato", "gocciole", "farina", "patate", "yogurt"]
 
 
 # check items on lidl and penny sites
