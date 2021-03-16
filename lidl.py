@@ -7,11 +7,11 @@ from selenium.webdriver.firefox.options import Options
 # initial setup
 options = Options()
 options.headless = True
-page_url = "https://www.lidl.it/it/c/offerte-settimanali/c10/w1"
+page_url = "https://www.lidl.it/it/offerte-settimanali"
 webD = wb.Firefox(options=options)
 webD.get(page_url)
 print()
-print("Headless Firefox Initialized\n")
+print("Headless Firefox Initialized at Lidl site\n")
 
 # click on the "accept cookies" button
 button = webD.find_element_by_xpath("/html/body/dialog/div/div[1]/button")
