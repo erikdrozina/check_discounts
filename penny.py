@@ -7,14 +7,15 @@ from selenium.webdriver.firefox.options import Options
 # initial setup
 options = Options()
 options.headless = True
-page_url = "https://www.pennymarket.it/offerte"
+page_url = "https://www.pennymarket.it/categorie/all"
 webD = wb.Firefox(options=options)
 webD.get(page_url)
 print()
-print("Headless Firefox Initialized\n")
+print("Headless Firefox Initialized at Penny site\n")
 
 # click on the "accept cookies" button
-button = webD.find_element_by_xpath('//*[@id="cookie-consent-button"]')
+sleep(2)
+button = webD.find_element_by_xpath('//*[@id="onetrust-accept-btn-handler"]')
 button.click()
 sleep(2)
 
