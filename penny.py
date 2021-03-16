@@ -26,13 +26,12 @@ def check_price_penny(strin):
     products = []
 
     # creating raw lists for products and prices
-    products_raw = webD.find_elements_by_tag_name("h5")
-    prices_raw = webD.find_elements_by_css_selector(
-        'div.px-0.penny-red-well-color')
+    products_raw = webD.find_elements_by_tag_name("h1")
+    prices_raw = webD.find_elements_by_tag_name("s")
 
     # creating final lists
     for i in range(len(prices_raw)):
-        if("EUR" in prices_raw[i].text):
+        if("€" in prices_raw[i].text):
             prices.append(prices_raw[i])
 
     for i in range(len(products_raw)):
@@ -43,6 +42,6 @@ def check_price_penny(strin):
     for i in range(len(products)):
         if strin in products[i].text.lower():
             print(products[i].text.lower() + ": " +
-                  prices[i].text.replace("EUR", "€"))
+                  prices[i].text.lower())
         else:
             pass
