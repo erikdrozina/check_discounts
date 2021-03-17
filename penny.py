@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 
 # initial setup
 options = Options()
-#options.headless = True
+options.headless = True
 page_url = "https://www.pennymarket.it/categorie/all"
 webD = wb.Chrome(options=options)
 webD.get(page_url)
