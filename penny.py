@@ -1,17 +1,17 @@
 import selenium
 from selenium import webdriver as wb
 from time import sleep
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 
 
 # initial setup
 options = Options()
-options.headless = True
+#options.headless = True
 page_url = "https://www.pennymarket.it/categorie/all"
-webD = wb.Firefox(options=options)
+webD = wb.Chrome(options=options)
 webD.get(page_url)
 print()
-print("Headless Firefox Initialized at Penny site\n")
+print("Headless Chrome Initialized at Penny site\n")
 
 # click on the "accept cookies" button
 sleep(2)

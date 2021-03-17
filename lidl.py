@@ -1,17 +1,17 @@
 import selenium
 from selenium import webdriver as wb
 from time import sleep
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.chrome.options import Options
 
 
 # initial setup
 options = Options()
 options.headless = True
 page_url = "https://www.lidl.it/it/offerte-settimanali"
-webD = wb.Firefox(options=options)
+webD = wb.Chrome(options=options)
 webD.get(page_url)
 print()
-print("Headless Firefox Initialized at Lidl site")
+print("Headless Chrome Initialized at Lidl site")
 
 # click on the "accept cookies" button
 sleep(2)
